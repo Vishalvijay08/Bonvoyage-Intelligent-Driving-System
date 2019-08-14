@@ -1,0 +1,42 @@
+{
+  "name": "BonVoyage",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "prepare-repository": "npm i -g react-native-cli yarn;yarn install; react- native link",
+    "emulator": "emulator -avd Nexus5V6L23_x86_64 -scale 1.0",
+    "install": "react-native run-android",
+    "start": "react-native start --reset-cache",
+    "android": "npm run install && npm run start",
+    "clean": "watchman watch-del-all && npm cache clean && cd android && ./gradlew clean && cd ..",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "16.4.1",
+    "react-native": "0.56.0",
+    "react-native-dialogflow": "^3.2.0",
+    "react-native-elements": "^0.19.1",
+    "react-native-maps": "^0.21.0",
+    "react-native-maps-with-navigation": "^0.20.2",
+    "react-native-material-bottom-navigation": "^1.0.0",
+    "react-native-vector-icons": "^5.0.0",
+    "react-native-video": "^3.2.0",
+    "react-native-voice": "^0.2.6",
+    "react-navigation": "^2.11.2",
+    "react-navigation-material-bottom-tabs": "^0.3.0"
+  },
+  "devDependencies": {
+    "babel-jest": "23.4.2",
+    "babel-preset-react-native": "5.0.2",
+    "jest": "23.5.0",
+    "react-test-renderer": "16.4.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts"
+    ]
+  }
+}
